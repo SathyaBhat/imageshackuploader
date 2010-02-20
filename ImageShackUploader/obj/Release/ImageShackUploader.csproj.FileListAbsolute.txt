@@ -1,0 +1,23 @@
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ImageShackUploader.Form1.resources
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ImageShackUploader.Properties.Resources.resources
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ImageShackUploader.csproj.GenerateResource.Cache
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\bin\Release\ImageShackUploader.exe
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\bin\Release\ImageShackUploader.pdb
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ImageShackUploader.exe
+C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\ImageShackUploader.pdb
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.exe
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.exe.config
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.frmISUpload.resources
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.Properties.Resources.resources
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.csproj.GenerateResource.Cache
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.exe
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.pdb
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.pdb
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.exe.manifest
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.application
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.exe.manifest
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.application
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackAPIWrapper.dll
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\screenCapture.dll
