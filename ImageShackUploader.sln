@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageShackUploader", "ImageShackUploader\ImageShackUploader.csproj", "{920E9D25-D50A-4279-A0BF-CF6A4F2E4531}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgurUploader", "ImageShackUploader\ImgurUploader.csproj", "{920E9D25-D50A-4279-A0BF-CF6A4F2E4531}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

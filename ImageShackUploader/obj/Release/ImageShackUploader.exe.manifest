@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImageShackUploader.exe" size="12800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImageShackUploader.exe" size="14848">
       <assemblyIdentity name="ImageShackUploader" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0bz6yo+TRSJGwt/393oZHcshuyQ=</dsig:DigestValue>
+        <dsig:DigestValue>fwu4/gOeVP25NUZiJc7Y9I/76Eo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HMzE5Q1Nttouj4NdTSH/dijjvVo=</dsig:DigestValue>
+        <dsig:DigestValue>ldBkLseV+t1RbrDDpX82M8Dg6m0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ImageShackUploader.Properties {
+namespace imguruploader.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

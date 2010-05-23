@@ -9,8 +9,6 @@ C:\Users\Sathya\AppData\Local\Temporary Projects\ImageShackUploader\obj\Release\
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.exe
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.exe.config
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ResolveAssemblyReference.cache
-C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.frmISUpload.resources
-C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.Properties.Resources.resources
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.exe
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackUploader.pdb
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\ImageShackUploader.pdb
@@ -21,3 +19,6 @@ C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageSh
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\ImageShackAPIWrapper.dll
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\GenerateResource.read.1.tlog
 C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\GenerateResource.write.1.tlog
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\bin\Release\screenCapture.dll
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\imguruploader.frmISUpload.resources
+C:\Users\Sathya\Documents\Visual Studio 2008\Projects\ImageShackUploader\ImageShackUploader\obj\Release\imguruploader.Properties.Resources.resources

@@ -1,31 +1,29 @@
-/* Simple capture desktop and upload to Imageshack tool 
+/* Simple capture desktop and upload to imgur tool 
  * By Sathyajith Bhat - http://sathyabh.at/
- * Drop a mail - sathya@sathyasays.com
- * Uses Bryce's C# Wrapper for Imageshack API ( http://www.codeemporium.com/2009/06/14/dot-net-c-sharp-wrapper-for-the-imageshack-xml-api/ )
+ * Drop a mail - sathya@sathyasays. com
  * Thanks to Omkarnath for coding the grab only selection mode logic http://intelomkar.wordpress.com/2009/12/21/screencapture-library/
  * Legal stuff - You're free to use this app. Sending me a mail on how you've used it would be helpful :)
  * And yes -  I am not liable for anything you do. If you screw up - don't blame me. */
 
 
-namespace ImageShackUploader
+namespace imguruploader
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
     using System.Drawing;
-    using System.Text;
-    using System.Net;
-    using System.IO;
-    using System.Windows.Forms;
     using System.Drawing.Imaging;
-    using Brycestrosoft.ImageShackAPIWrapper;
+    using System.IO;
+    using System.Net;
+    using System.Text;
+    using System.Windows.Forms;
+    using System.Xml;
 
     public partial class frmISUpload : Form
     {
         Image imgScreenCap;
         string strThumbnailLink = string.Empty;
         string strFullImageLink=string.Empty;
+        private string strAPIKey = "1fcb49d680e14d21e2dd2a37bb4c3e47";
         public frmISUpload()
         {
             InitializeComponent();
@@ -46,9 +44,7 @@ namespace ImageShackUploader
                 imgScreenCap = Clipboard.GetImage();
                 imgScreenCap.Save(strFilename, ImageFormat.Jpeg);
                 System.Threading.Thread.Sleep(1000);
-                imgScreenCap.Dispose();
-                //   niSnap.BalloonTipText = "Image saved";
-                //  niSnap.ShowBalloonTip(5000);
+                imgScreenCap.Dispose();            
                 return true;
             }
             else
@@ -61,16 +57,78 @@ namespace ImageShackUploader
 
         public bool UploadImage()
         {
-            UploadedImageDetails ImageDetails;
-            
-            IImageShackUploader uploader = new StandardImageShackUploader();
+            string webPostAddress = "http://imgur.com/api/upload.xml";
             try
             {
-                ImageDetails = uploader.UploadImage("upload.jpg");
-                niSnap.BalloonTipText = ("Image has been uploaded to ImageShack and link has been copied to clipboard");
-                Clipboard.SetText(ImageDetails.ImageLink.ToString());
-                strFullImageLink = ImageDetails.ImageLink.ToString();
-                strThumbnailLink = ImageDetails.ThumbLink.ToString();
+             // the request header
+                 Dictionary<string, string> fields = new Dictionary<string, string>();
+            fields.Add("key",strAPIKey);
+                 HttpWebRequest hr = WebRequest.Create(webPostAddress) as HttpWebRequest;
+                    string bound = "----------------------------" + DateTime.Now.Ticks.ToString("x");
+                    hr.ContentType = "multipart/form-data; boundary=" + bound;
+                    hr.Method = "POST";
+                    hr.KeepAlive = true;
+                    hr.Credentials = CredentialCache.DefaultCredentials;
+
+                    byte[] boundBytes = Encoding.ASCII.GetBytes("\r\n--" + bound + "\r\n");
+                    string formDataTemplate = "\r\n--" + bound + "\r\nContent-Disposition: form-data; name=\"{0}\";\r\n\r\n{1}";
+
+                    //add fields + a boundary
+                    MemoryStream fieldData = new MemoryStream();
+                    foreach (string key in fields.Keys)
+                    {
+                        byte[] formItemBytes = Encoding.UTF8.GetBytes(
+                                string.Format(formDataTemplate, key, fields[key]));
+                        fieldData.Write(formItemBytes, 0, formItemBytes.Length);
+                    }
+                    fieldData.Write(boundBytes, 0, boundBytes.Length);
+
+                    //calculate the total length we expect to send
+                    string headerTemplate =
+                            "Content-Disposition: form-data; name=\"{0}\"; filename=\"{1}\"\r\n Content-Type: application/octet-stream\r\n\r\n";
+                    long fileBytes = 0;
+                    
+                    byte[] headerBytes = Encoding.UTF8.GetBytes(
+                            String.Format(headerTemplate, "image", "upload.jpg"));
+                    FileStream fs = new FileStream("upload.jpg", FileMode.Open, FileAccess.Read);
+
+                    fileBytes += headerBytes.Length;
+                    fileBytes += fs.Length;
+                    fileBytes += boundBytes.Length;
+                    hr.ContentLength = fieldData.Length + fileBytes;
+
+                    Stream s = hr.GetRequestStream();
+              
+                    fieldData.WriteTo(s);
+
+                    
+                    s.Write(headerBytes, 0, headerBytes.Length);
+                    
+                    int bytesRead = 0;
+                    long bytesSoFar = 0;
+                    byte[] buffer = new byte[10240];
+                    while ((bytesRead = fs.Read(buffer, 0, buffer.Length)) != 0)
+                    {
+                        bytesSoFar += bytesRead;
+                        s.Write(buffer, 0, bytesRead);
+                    }
+                    s.Write(boundBytes, 0, boundBytes.Length);
+                   fs.Close();
+                    s.Close();
+
+                    HttpWebResponse response = hr.GetResponse() as HttpWebResponse;
+                    string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                    XmlDocument responseXml = new XmlDocument();
+                    responseXml.LoadXml(responseString);
+                    if (responseXml["rsp"].Attributes["stat"].Value == "ok")
+                    {
+                            strFullImageLink = responseXml["rsp"]["original_image"].InnerText;
+                            strThumbnailLink = responseXml["rsp"]["large_thumbnail"].InnerText;
+
+                    }
+       
+                niSnap.BalloonTipText = ("Image has been uploaded to imgur and link has been copied to clipboard");
+                Clipboard.SetText(strFullImageLink); 
                 niSnap.ShowBalloonTip(500000);
                 GC.Collect();
                 return true;
@@ -119,23 +177,6 @@ namespace ImageShackUploader
                 Clipboard.SetText(strThumbnailLink);
             }
         }
-<<<<<<< HEAD
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-            
-        }
-
-
-
- 
-    }
-
-
-    
-
-      
-=======
->>>>>>> 44e1b485f9ba4720cf643a5979c08c972fc6639e
     }
 }
