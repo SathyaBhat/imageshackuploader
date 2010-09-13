@@ -35,6 +35,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SelModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyThumbnailLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pNGOutputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +51,11 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
             this.SelModeToolStripMenuItem,
-            this.copyThumbnailLinkToolStripMenuItem});
+            this.copyThumbnailLinkToolStripMenuItem,
+            this.pNGOutputToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(189, 92);
-           
+            this.contextMenuStrip1.Size = new System.Drawing.Size(189, 114);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // exitToolStripMenuItem
             // 
@@ -75,6 +77,13 @@
             this.copyThumbnailLinkToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.copyThumbnailLinkToolStripMenuItem.Text = "Copy Thumbnail Link";
             this.copyThumbnailLinkToolStripMenuItem.Click += new System.EventHandler(this.copyThumbnailLinkToolStripMenuItem_Click);
+            // 
+            // pNGOutputToolStripMenuItem
+            // 
+            this.pNGOutputToolStripMenuItem.Name = "pNGOutputToolStripMenuItem";
+            this.pNGOutputToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.pNGOutputToolStripMenuItem.Text = "PNG output";
+            this.pNGOutputToolStripMenuItem.Click += new System.EventHandler(this.pNGOutputToolStripMenuItem_Click);
             // 
             // frmISUpload
             // 
@@ -99,6 +108,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SelModeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyThumbnailLinkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pNGOutputToolStripMenuItem;
     }
 }
 

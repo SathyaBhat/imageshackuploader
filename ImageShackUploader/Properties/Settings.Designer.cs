@@ -22,5 +22,17 @@ namespace imguruploader.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Jpeg")]
+        public global::System.Drawing.Imaging.ImageFormat imgformat {
+            get {
+                return ((global::System.Drawing.Imaging.ImageFormat)(this["imgformat"]));
+            }
+            set {
+                this["imgformat"] = value;
+            }
+        }
     }
 }
