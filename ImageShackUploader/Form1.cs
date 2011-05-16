@@ -170,6 +170,7 @@ namespace imguruploader
             sc.showCanvas();
             System.Threading.Thread.Sleep(1000);
             UploadImage();
+            this.Hide();
         }
 
         private void copyThumbnailLinkToolStripMenuItem_Click(object sender, EventArgs e)
