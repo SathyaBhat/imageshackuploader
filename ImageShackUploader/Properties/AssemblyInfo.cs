@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ImageShackUploader")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ImgurUploader")]
+[assembly: AssemblyDescription("Simple, no frills upload to imgur application")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sathya")]
-[assembly: AssemblyProduct("ImageShackUploader")]
+[assembly: AssemblyProduct("ImgurUploader")]
 [assembly: AssemblyCopyright("Copyright © Sathya 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
